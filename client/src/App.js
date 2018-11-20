@@ -6,7 +6,13 @@ import truffleContract from "truffle-contract";
 import "./App.css";
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+  state = { 
+    storageValue: 0, 
+    web3: null, 
+    accounts: null, 
+    contract: null ,
+    contractVersion: ""
+  };
 
   componentDidMount = async () => {
     try {
@@ -44,6 +50,11 @@ class App extends Component {
 
     // Update state with the result.
     this.setState({ storageValue: response.toNumber() });
+
+    // Get the contract version
+    const version = await contract.getVersion();
+
+    this.setState({ contractVersion: version });
   };
 
   render() {
@@ -63,6 +74,12 @@ class App extends Component {
           Try changing the value stored on <strong>line 37</strong> of App.js.
         </p>
         <div>The stored value is: {this.state.storageValue}</div>
+        
+        <hr />
+        <div>
+          Version: {this.state.contractVersion}
+        </div>
+        
       </div>
     );
   }
