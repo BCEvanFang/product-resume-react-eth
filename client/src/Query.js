@@ -41,7 +41,7 @@ class Query extends Component {
       
       const instance = await Contract.deployed();
 
-      this.setState({ web3, accounts, contract: instance }, this.getProductFromChain);
+      this.setState({ web3, accounts, contract: instance });
 
       console.log("Web3, account, contract, are ready");
 
