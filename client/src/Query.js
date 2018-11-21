@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import SearchButton from "./SearchButton";
-import AlertErrorMessage from "./AlertErrorMessage"
-import AlertProductInformation from "./AlertProductInformation"
+import SearchButton from "./components/SearchButton";
+import AlertErrorMessage from "./components/AlertErrorMessage"
+import AlertProductInformation from "./components/AlertProductInformation"
+
 // Eth stuffs
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
