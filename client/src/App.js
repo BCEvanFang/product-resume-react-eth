@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 // import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import ProductResumeContract from "./contracts/ProductResume.json";
 import getWeb3 from "./utils/getWeb3";
@@ -140,6 +141,9 @@ class App extends Component {
         <div>
           Product Information: <span>{this.state.pruductFromChain.info}</span>
         </div>
+
+        <hr/>
+
       </div>
     );
   }

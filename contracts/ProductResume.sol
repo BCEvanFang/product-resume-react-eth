@@ -26,4 +26,11 @@ contract ProductResume {
   function get() public view returns (string, string, string) {
     return (id, name, info);
   }
+
+  function getById(string _id) public view returns (string, string, string) {
+    if(keccak256(bytes(id)) == keccak256(bytes(_id))) {
+      return (id, name, info);
+    }
+    return ("", "", "");
+  }
 }
