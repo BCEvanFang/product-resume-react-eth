@@ -67,7 +67,7 @@ class Query extends Component {
     // Get product from blockchain
     try {
 
-      let response = await contract.getById(searchValue);
+      let response = await contract.getProduct(searchValue);
       
       this.setState({product: {
         id: response[0],

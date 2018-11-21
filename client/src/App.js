@@ -60,7 +60,7 @@ class App extends Component {
 
     // Get the contract version
     try {
-      let result = await contract.save(productId, productName, productInfo, { from: accounts[0] });
+      let result = await contract.addProduct(productId, productName, productInfo, { from: accounts[0] });
       console.log(result)
 
       // 更新資料
@@ -89,7 +89,7 @@ class App extends Component {
     const { contract } = this.state;
 
     // Get the value from the contract to prove it worked.
-    const response = await contract.get();
+    const response = await contract.getProductBySeq(0);
 
     this.setState({pruductFromChain: {
       id: response[0],
