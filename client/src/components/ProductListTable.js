@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 
 export default class ProductListTable extends Component {
   state = {
@@ -13,6 +14,9 @@ export default class ProductListTable extends Component {
         <td>{product.name}</td>
         <td>{product.info}</td>
         <td>{product.seq}</td>
+        <td>
+          <Link to={"/edit/" + product.seq}>Edit</Link>
+        </td>
       </tr>
     ));
 
@@ -24,6 +28,7 @@ export default class ProductListTable extends Component {
             <th>Product Name</th>
             <th>Product Info</th>
             <th>Product Seq No.</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
