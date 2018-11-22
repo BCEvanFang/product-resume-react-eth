@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Query from "./Query";
 import AddProduct from "./AddProduct";
+import EditProduct from "./EditProduct"
 import ProductList from "./ProductList";
 import registerServiceWorker from "./registerServiceWorker";
 import { BrowserRouter, Route } from "react-router-dom";
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path="/query" component={Query} />
       <Route path="/add" component={AddProduct} />
       <Route path="/list" component={ProductList} />
+      <Route path="/edit/:seq" component={EditProduct} />
     </div>
   </BrowserRouter>,
   document.getElementById("root")
