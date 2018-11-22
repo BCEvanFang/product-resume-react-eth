@@ -40,7 +40,7 @@ export default class ProductList extends Component {
     try {
       // 取得 product 總數
       const response = await contract.getProductCount();
-      const count = parseInt(response);
+      const count = parseInt(response, 10);
       this.setState({count})
 
       if(count > 0) {
@@ -53,7 +53,7 @@ export default class ProductList extends Component {
             id: result._id,
             name: result._name,
             info: result._info,
-            seq: parseInt(result._seq),
+            seq: parseInt(result._seq, 10),
           });
         }
         
