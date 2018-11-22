@@ -31,7 +31,6 @@ export default class EditProduct extends Component {
         { web3, accounts, contract: instance },
         this.getProductData
       );
-      console.log("eth is ready");
     } catch (error) {
       alert(
         "Failed to load web3, accounts, or contract. Check console for details."
@@ -55,7 +54,6 @@ export default class EditProduct extends Component {
           info: response[2]
         }
       });
-      console.log(response);
     } catch (error) {
       console.error(error);
     }

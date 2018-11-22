@@ -26,8 +26,6 @@ export default class AddProduct extends Component {
       Contract.setProvider(web3.currentProvider);
       const instance = await Contract.deployed();
       this.setState({ web3, accounts, contract: instance });
-      console.log("eth is ready");
-      console.log(this.state.contract);
     } catch (error) {
       alert(
         "Failed to load web3, accounts, or contract. Check console for details."

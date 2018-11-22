@@ -24,7 +24,6 @@ export default class ProductList extends Component {
       Contract.setProvider(web3.currentProvider);
       const instance = await Contract.deployed();
       this.setState({ web3, accounts, contract: instance }, this.getProductData);
-      console.log("eth is ready");
       // console.log(this.state.contract);
     } catch (error) {
       alert(
