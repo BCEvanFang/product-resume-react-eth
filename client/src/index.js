@@ -14,7 +14,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 ReactDOM.render(
   <BrowserRouter>
     <div>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={ProductList} />
       <Route path="/query" component={Query} />
       <Route path="/add" component={AddProduct} />
       <Route path="/list" component={ProductList} />
