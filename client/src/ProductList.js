@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import ProductListTable from "./components/ProductListTable";
 
 import ProductResumeContract from "./contracts/ProductResume.json";
@@ -71,10 +72,18 @@ export default class ProductList extends Component {
 
         <hr />
 
-        <h4>
+        <h5>
           Total Product:{" "}
           <span className="badge badge-primary">{this.state.count}</span>
-        </h4>
+        </h5>
+
+        <div style={{textAlign: "right"}}>
+          <Link to="/add">
+            <button type="button" className="btn btn-success">
+              + Add New Product
+            </button>
+          </Link>
+        </div>
 
         <br />
 
