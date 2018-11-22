@@ -12,11 +12,23 @@ migrate --reset
 
 測試語法(In truffle develop console)
 ```js
-// save
-ProductResume.deployed().then(function(instance){return instance.save("apple001", "Apple Fuji", "Super good apple!");});
+// 取版本號
+ProductResume.deployed().then(function(instance){return instance.getVersion();});
 
-// get
-ProductResume.deployed().then(function(instance){return instance.get();});
+// 新增產品
+ProductResume.deployed().then(function(instance){return instance.addProduct("456", "Name456", "Info456");});
+
+// 更新產品
+ProductResume.deployed().then(function(instance){return instance.updateProduct("456", "Name456-2", "Info456-2");});
+
+// 用id取產品
+ProductResume.deployed().then(function(instance){return instance.getProduct("456");});
+
+// 取產品總數
+ProductResume.deployed().then(function(instance){return instance.getProductCount();});
+
+// 用產品流水號取產品
+ProductResume.deployed().then(function(instance){return instance.getProductBySeq(0);});
 ```
 
 啟動網站
