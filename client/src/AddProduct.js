@@ -7,7 +7,6 @@ import truffleContract from "truffle-contract";
 
 export default class AddProduct extends Component {
   state = {
-    storageValue: 0,
     web3: null,
     accounts: null,
     contract: null,
